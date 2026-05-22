@@ -60,7 +60,7 @@ const PILLARS: Pillar[] = [
 
 export default function Pillars() {
   return (
-    <section className="bg-cream px-6 pb-[80px] pt-[80px] sm:px-10">
+    <section className="bg-[#eef3f8] px-6 pb-[80px] pt-[80px] sm:px-10">
       <div className="mx-auto max-w-[1280px]">
         {/* Section heading */}
         <div className="mb-12 text-center">
