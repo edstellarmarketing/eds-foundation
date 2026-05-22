@@ -5,6 +5,8 @@ type Pillar = {
   color: string;
   bgColor: string;
   courseCount: number;
+  image: string;
+  imageAlt: string;
 };
 
 const PILLARS: Pillar[] = [
@@ -15,6 +17,8 @@ const PILLARS: Pillar[] = [
     color: "#2ECC71",
     bgColor: "rgba(46,204,113,0.18)",
     courseCount: 4,
+    image: "/pillars/financial.jpg",
+    imageAlt: "Woman smiling holding cash and a savings account passbook",
   },
   {
     title: "Digital Literacy & Technology",
@@ -23,6 +27,8 @@ const PILLARS: Pillar[] = [
     color: "#5B8DEF",
     bgColor: "rgba(91,141,239,0.18)",
     courseCount: 7,
+    image: "/pillars/digital.jpg",
+    imageAlt: "Woman working on a laptop, learning digital skills",
   },
   {
     title: "Online Safety",
@@ -31,6 +37,8 @@ const PILLARS: Pillar[] = [
     color: "#FF7A6E",
     bgColor: "rgba(232,93,80,0.20)",
     courseCount: 3,
+    image: "/pillars/safety.jpg",
+    imageAlt: "Mother and children with a smartphone showing security icons",
   },
   {
     title: "Employability & Workplace Skills",
@@ -39,6 +47,8 @@ const PILLARS: Pillar[] = [
     color: "#C896F0",
     bgColor: "rgba(166,109,232,0.20)",
     courseCount: 4,
+    image: "/pillars/employability.jpg",
+    imageAlt: "Job candidate shaking hands during an interview",
   },
   {
     title: "Entrepreneurship & Income Generation",
@@ -47,6 +57,8 @@ const PILLARS: Pillar[] = [
     color: "#F5B547",
     bgColor: "rgba(243,156,18,0.20)",
     courseCount: 3,
+    image: "/pillars/entrepreneurship.jpg",
+    imageAlt: "Small business owner running a tailoring shop",
   },
   {
     title: "Career Guidance",
@@ -55,6 +67,8 @@ const PILLARS: Pillar[] = [
     color: "#5BAEF0",
     bgColor: "rgba(52,152,219,0.20)",
     courseCount: 1,
+    image: "/pillars/career.jpg",
+    imageAlt: "Mentor reviewing a career options diagram with a student",
   },
 ];
 
@@ -106,8 +120,12 @@ export default function Pillars() {
                 </span>
               </div>
 
-              {/* Image placeholder */}
-              <div className="border-l border-dashed border-white/15 bg-white/[0.03]" />
+              {/* Pillar image */}
+              <img
+                src={pillar.image}
+                alt={pillar.imageAlt}
+                className="h-full w-full object-cover"
+              />
             </div>
           ))}
         </div>

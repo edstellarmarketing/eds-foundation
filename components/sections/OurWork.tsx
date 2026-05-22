@@ -2,11 +2,15 @@ const CARDS = [
   {
     title: "Practical skills for real lives",
     body: "We deliver hands-on, community-based training for people who need it most, women, youth, small business owners, and first-time job seekers.",
+    image: "/work/practical-skills.jpg",
+    imageAlt: "Woman learning tailoring on a sewing machine in a community workshop",
     cta: { label: "View all 22 courses", href: "#courses" },
   },
   {
     title: "Training where people already gather",
     body: "We work through Self-Help Groups, community centres, schools, and ITIs, reaching people in spaces they already trust and learn in.",
+    image: "/work/community-training.jpg",
+    imageAlt: "Trainer presenting Our Community Our Future poster to a circle of women in a community session",
     cta: { label: "Partner with us", href: "#partner" },
   },
 ];
@@ -21,8 +25,12 @@ export default function OurWork() {
               key={card.title}
               className="overflow-hidden rounded-2xl border border-gray-200 bg-gray-50 transition-all hover:border-gray-300 hover:shadow-[0_8px_24px_rgba(27,43,101,0.06)]"
             >
-              {/* Image placeholder */}
-              <div className="h-[260px] border-b border-dashed border-gray-300 bg-gray-100" />
+              {/* Card image */}
+              <img
+                src={card.image}
+                alt={card.imageAlt}
+                className="h-[260px] w-full object-cover"
+              />
 
               {/* Body */}
               <div className="flex flex-col gap-5 p-10">

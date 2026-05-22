@@ -80,13 +80,18 @@ export default function Hero() {
         }}
       />
 
-      {/* Spotlight focus on the image area — bright glow + soft vignette */}
+      {/* Hero image — trainer with community, fades naturally into cream */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0"
+        className="pointer-events-none absolute right-0 top-[80px] z-[1] hidden h-[calc(100%-180px)] w-[55%] lg:block"
         style={{
-          background:
-            "radial-gradient(ellipse 60% 80% at 72% 50%, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.15) 25%, transparent 50%, rgba(35,50,85,0.06) 80%, rgba(35,50,85,0.12) 100%)",
+          backgroundImage: "url('/hero.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center right",
+          maskImage:
+            "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.5) 8%, #000 22%, #000 100%)",
+          WebkitMaskImage:
+            "linear-gradient(to right, transparent 0%, rgba(0,0,0,0.5) 8%, #000 22%, #000 100%)",
         }}
       />
 
