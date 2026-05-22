@@ -1,15 +1,31 @@
 const SOCIALS = [
   {
     label: "LinkedIn",
-    href: "#",
+    href: "https://www.linkedin.com/company/edstellarofficial/",
     svg: (
       <path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14M8.34 17V10H6v7zM7.17 8.83a1.34 1.34 0 100-2.68 1.34 1.34 0 000 2.68M18 17v-3.86c0-2.07-1.34-2.83-2.5-2.83-1.1 0-1.86.65-2.16 1.13H13.3V10h-2.23v7h2.34v-3.78c0-.95.62-1.5 1.36-1.5.72 0 1.23.42 1.23 1.47V17z" />
     ),
     fill: true,
   },
   {
+    label: "Facebook",
+    href: "https://www.facebook.com/edstellarofficial/",
+    svg: (
+      <path d="M22 12a10 10 0 10-11.56 9.88V14.9H7.9V12h2.54V9.85c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.9h-2.33v6.98A10 10 0 0022 12z" />
+    ),
+    fill: true,
+  },
+  {
+    label: "X (Twitter)",
+    href: "https://x.com/edstellarglobal",
+    svg: (
+      <path d="M18.244 2H21.5l-7.4 8.453L23 22h-7.039l-5.32-6.953L4.5 22H1.244l7.93-9.06L1 2h7.18l4.81 6.378L18.244 2zm-1.18 18.06h1.866L7.06 3.86H5.07l11.994 16.2z" />
+    ),
+    fill: true,
+  },
+  {
     label: "Instagram",
-    href: "#",
+    href: "https://www.instagram.com/edstellarofficial/",
     svg: (
       <>
         <rect x="2" y="2" width="20" height="20" rx="5" />
@@ -20,16 +36,8 @@ const SOCIALS = [
     fill: false,
   },
   {
-    label: "Twitter",
-    href: "#",
-    svg: (
-      <path d="M22 4.01c-1 .49-1.98.689-3 .99-1.12-1.265-2.783-1.335-4.38-.737S11.977 6.323 12 8v1c-3.245.083-6.135-1.395-8-4 0 0-4.182 7.433 4 11-1.872 1.247-3.739 2.088-6 2 3.308 1.803 6.913 2.423 10.034 1.517 3.58-1.04 6.522-3.723 7.651-7.742a13.84 13.84 0 00.497-3.753c0-.249 1.51-2.772 1.818-4.013z" />
-    ),
-    fill: true,
-  },
-  {
     label: "YouTube",
-    href: "#",
+    href: "https://www.youtube.com/@edstellarofficial",
     svg: (
       <path d="M21.58 7.19a2.5 2.5 0 00-1.76-1.77C18.25 5 12 5 12 5s-6.25 0-7.82.42a2.5 2.5 0 00-1.76 1.77C2 8.76 2 12 2 12s0 3.24.42 4.81a2.5 2.5 0 001.76 1.77C5.75 19 12 19 12 19s6.25 0 7.82-.42a2.5 2.5 0 001.76-1.77C22 15.24 22 12 22 12s0-3.24-.42-4.81zM10 15V9l5.2 3z" />
     ),
@@ -66,6 +74,8 @@ export default function Footer() {
                 key={s.label}
                 href={s.href}
                 aria-label={s.label}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex h-8 w-8 items-center justify-center rounded-full bg-white/[0.06] text-white/50 transition-colors hover:bg-lime hover:text-navy"
               >
                 <svg

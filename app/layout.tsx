@@ -82,7 +82,13 @@ const jsonLd = {
         name: "Edstellar",
         url: "https://www.edstellar.com/",
       },
-      sameAs: [],
+      sameAs: [
+        "https://www.linkedin.com/company/edstellarofficial/",
+        "https://www.facebook.com/edstellarofficial/",
+        "https://x.com/edstellarglobal",
+        "https://www.instagram.com/edstellarofficial/",
+        "https://www.youtube.com/@edstellarofficial",
+      ],
     },
     {
       "@type": "WebSite",
