@@ -1,20 +1,54 @@
+const CARDS = [
+  {
+    title: "Practical skills for real lives",
+    body: "We deliver hands-on, community-based training for people who need it most, women, youth, small business owners, and first-time job seekers.",
+    cta: { label: "View all 22 courses", href: "#courses" },
+  },
+  {
+    title: "Training where people already gather",
+    body: "We work through Self-Help Groups, community centres, schools, and ITIs, reaching people in spaces they already trust and learn in.",
+    cta: { label: "Partner with us", href: "#partner" },
+  },
+];
+
 export default function OurWork() {
   return (
     <section id="work" className="bg-white px-6 pb-10 pt-20 sm:px-10">
       <div className="mx-auto max-w-[1280px]">
         <div className="grid grid-cols-1 gap-7 lg:grid-cols-2">
-          {Array.from({ length: 2 }).map((_, i) => (
+          {CARDS.map((card) => (
             <div
-              key={i}
-              className="overflow-hidden rounded-2xl border border-dashed border-gray-300 bg-gray-50"
+              key={card.title}
+              className="overflow-hidden rounded-2xl border border-gray-200 bg-gray-50 transition-all hover:border-gray-300 hover:shadow-[0_8px_24px_rgba(27,43,101,0.06)]"
             >
-              {/* Card image slot */}
+              {/* Image placeholder */}
               <div className="h-[260px] border-b border-dashed border-gray-300 bg-gray-100" />
-              {/* Card body */}
-              <div className="space-y-4 p-8">
-                <div className="h-10 w-3/4 rounded bg-gray-200" />
-                <div className="h-16 rounded bg-gray-100" />
-                <div className="h-6 w-40 rounded bg-gray-200" />
+
+              {/* Body */}
+              <div className="flex flex-col gap-5 p-10">
+                <h3 className="font-serif text-[clamp(24px,2.6vw,30px)] font-bold leading-[1.2] tracking-[-0.3px] text-navy">
+                  {card.title}
+                </h3>
+                <p className="text-[15.5px] font-normal leading-[1.65] text-[#5a6573]">
+                  {card.body}
+                </p>
+                <a
+                  href={card.cta.href}
+                  className="group inline-flex items-center gap-2 text-[14px] font-bold uppercase tracking-[0.6px] text-navy transition-colors hover:text-lime-deep"
+                >
+                  {card.cta.label}
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    className="transition-transform group-hover:translate-x-1"
+                  >
+                    <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </a>
               </div>
             </div>
           ))}
