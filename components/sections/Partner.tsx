@@ -8,16 +8,43 @@ export default function Partner() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!name.trim() || !email.trim()) return;
-    setSubmitted(true);
-    setName("");
-    setOrg("");
-    setEmail("");
-    setMessage("");
-    setTimeout(() => setSubmitted(false), 4000);
+    if (!name.trim() || !email.trim() || sending) return;
+
+    const endpoint = process.env.NEXT_PUBLIC_ENQUIRY_ENDPOINT;
+    if (!endpoint) {
+      setError("Form endpoint is not configured.");
+      return;
+    }
+
+    setSending(true);
+    setError("");
+    try {
+      const res = await fetch(endpoint, {
+        method: "POST",
+        // text/plain avoids a CORS preflight against Google Apps Script
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify({ name, org, email, message }),
+        redirect: "follow",
+      });
+      const payload = await res.json().catch(() => ({ ok: res.ok }));
+      if (!payload.ok) throw new Error(payload.error || "Submission failed");
+
+      setSubmitted(true);
+      setName("");
+      setOrg("");
+      setEmail("");
+      setMessage("");
+      setTimeout(() => setSubmitted(false), 4000);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -163,24 +190,32 @@ export default function Partner() {
                 />
                 <button
                   type="submit"
-                  className="mt-1 inline-flex w-full items-center justify-center gap-2.5 rounded bg-lime px-7 py-4 text-[13px] font-bold uppercase tracking-[0.6px] text-navy transition-all hover:bg-lime-deep hover:shadow-[0_6px_18px_rgba(126,217,87,0.35)]"
+                  disabled={sending}
+                  className="mt-1 inline-flex w-full items-center justify-center gap-2.5 rounded bg-lime px-7 py-4 text-[13px] font-bold uppercase tracking-[0.6px] text-navy transition-all hover:bg-lime-deep hover:shadow-[0_6px_18px_rgba(126,217,87,0.35)] disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:bg-lime disabled:hover:shadow-none"
                 >
-                  Send Enquiry
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                  >
-                    <path
-                      d="M5 12h14M12 5l7 7-7 7"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+                  {sending ? "Sending..." : "Send Enquiry"}
+                  {!sending && (
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                    >
+                      <path
+                        d="M5 12h14M12 5l7 7-7 7"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  )}
                 </button>
+                {error && (
+                  <p className="text-[13px] leading-[1.5] text-red-600" role="alert">
+                    {error}
+                  </p>
+                )}
               </form>
             </>
           )}

@@ -28,3 +28,13 @@ next-env.d.ts
 
 # vercel
 .vercel
+
+# playwright artifacts captured during local testing
+.playwright-mcp/
+/*.png
+
+# claude code project config
+.claude/
+
+# source copy of the catalog (the served copy lives in public/)
+/edstellar_course_catalog.pdf
