@@ -503,6 +503,9 @@ export default function Courses() {
               onClick={() => {
                 setActivePill(0);
                 setIndex(0);
+                document
+                  .getElementById("courses")
+                  ?.scrollIntoView({ behavior: "smooth", block: "start" });
               }}
               className="inline-flex items-center gap-2.5 rounded bg-lime px-7 py-3.5 text-[12.5px] font-bold uppercase tracking-[0.7px] text-navy transition-all hover:-translate-y-0.5 hover:bg-lime-deep hover:shadow-[0_6px_18px_rgba(126,217,87,0.35)]"
             >
@@ -517,7 +520,7 @@ export default function Courses() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-[12.5px] font-bold uppercase tracking-[0.7px] text-lime-deep underline-offset-4 transition-opacity hover:opacity-80"
             >
-              View All Courses
+              Download Catalog
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
