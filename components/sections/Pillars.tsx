@@ -136,7 +136,7 @@ export default function Pillars() {
               </svg>
             </a>
             <a
-              href="/edstellar_course_catalog.pdf"
+              href="https://eds-foundation.vercel.app/edstellar_course_catalog.pdf"
               download="edstellar_course_catalog.pdf"
               className="inline-flex items-center gap-2 text-[12.5px] font-bold uppercase tracking-[0.7px] text-navy transition-opacity hover:opacity-80"
             >
