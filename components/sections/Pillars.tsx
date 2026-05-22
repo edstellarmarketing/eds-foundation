@@ -137,7 +137,7 @@ export default function Pillars() {
             </a>
             <a
               href="/edstellar_course_catalog.pdf"
-              download
+              download="edstellar_course_catalog.pdf"
               className="inline-flex items-center gap-2 text-[12.5px] font-bold uppercase tracking-[0.7px] text-navy transition-opacity hover:opacity-80"
             >
               View Course Catalog

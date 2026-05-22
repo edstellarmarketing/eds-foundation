@@ -458,7 +458,7 @@ export default function Courses() {
         <div className="relative mb-10 text-center">
           <a
             href="/edstellar_course_catalog.pdf"
-            download
+            download="edstellar_course_catalog.pdf"
             className="absolute right-0 top-2 hidden items-center gap-2.5 rounded border-[1.5px] border-navy bg-white px-5 py-3 text-[11.5px] font-semibold uppercase tracking-[0.4px] text-navy transition-all hover:bg-navy hover:text-white lg:inline-flex"
           >
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -478,7 +478,7 @@ export default function Courses() {
 
         <a
           href="/edstellar_course_catalog.pdf"
-          download
+          download="edstellar_course_catalog.pdf"
           className="mx-auto mb-6 flex w-full max-w-xs items-center justify-center gap-2.5 rounded border-[1.5px] border-navy bg-white px-5 py-3 text-[11.5px] font-semibold uppercase tracking-[0.4px] text-navy transition-all hover:bg-navy hover:text-white lg:hidden"
         >
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
