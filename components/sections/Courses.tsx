@@ -7,6 +7,8 @@ type Course = {
   target: string;
   hoursRange: string;
   sessions: string;
+  image?: string;
+  imageAlt?: string;
 };
 
 type Category = {
@@ -16,6 +18,8 @@ type Category = {
   color: string;
   bgColor: string;
   hoursRange: string;
+  image: string;
+  imageAlt: string;
   courses: Course[];
 };
 
@@ -27,30 +31,40 @@ const CATEGORIES: Category[] = [
     color: "#2ECC71",
     bgColor: "rgba(46,204,113,0.14)",
     hoursRange: "12-15 hrs",
+    image: "/courses/financial.jpg",
+    imageAlt: "Woman counting rupee notes at a table with a passbook",
     courses: [
       {
         name: "Financial Literacy for Women",
         target: "Women (18-60), SHG members, homemakers",
         hoursRange: "10-12 hrs",
         sessions: "5 sessions",
+        image: "/courses/financial/financial-literacy-women.jpg",
+        imageAlt: "Group of women learning budgeting and savings together",
       },
       {
         name: "Banking & Digital Payments",
         target: "First-time bank users, rural women, small vendors",
         hoursRange: "6-8 hrs",
         sessions: "4 sessions",
+        image: "/courses/financial/banking-digital-payments.jpg",
+        imageAlt: "Woman paying a vegetable vendor with a QR code on her phone",
       },
       {
         name: "Understanding Debt & Credit",
         target: "Women, small business owners, farmers",
         hoursRange: "5-6 hrs",
         sessions: "3 sessions",
+        image: "/courses/financial/debt-credit.jpg",
+        imageAlt: "Woman reviewing loan paperwork with a calculator at a desk",
       },
       {
         name: "Government Schemes & Benefits",
         target: "Low-income families, women, senior citizens",
         hoursRange: "5-6 hrs",
         sessions: "3 sessions",
+        image: "/courses/financial/government-schemes.jpg",
+        imageAlt: "Woman reading a government scheme brochure at a help centre",
       },
     ],
   },
@@ -61,48 +75,64 @@ const CATEGORIES: Category[] = [
     color: "#5B8DEF",
     bgColor: "rgba(91,141,239,0.14)",
     hoursRange: "18-25 hrs",
+    image: "/courses/digital.jpg",
+    imageAlt: "Two women learning together on a laptop",
     courses: [
       {
         name: "Canva for Everyone",
         target: "SHG members, small vendors, students, job seekers",
         hoursRange: "5-6 hrs",
         sessions: "3 sessions",
+        image: "/courses/digital/canva.jpg",
+        imageAlt: "Woman designing a poster on a laptop using Canva",
       },
       {
         name: "Google & Internet for Daily Life",
         target: "Anyone with basic phone skills, rural populations",
         hoursRange: "5-6 hrs",
         sessions: "3 sessions",
+        image: "/courses/digital/google-internet.jpg",
+        imageAlt: "Older man and young helper learning to search on a phone",
       },
       {
         name: "WhatsApp for Personal & Business Use",
         target: "Small vendors, SHG members, youth",
         hoursRange: "3-4 hrs",
         sessions: "2 sessions",
+        image: "/courses/digital/whatsapp.jpg",
+        imageAlt: "Small vendor showcasing products on WhatsApp Business",
       },
       {
         name: "Government Apps & Online Services",
         target: "General population needing government services",
         hoursRange: "5-6 hrs",
         sessions: "3 sessions",
+        image: "/courses/digital/government-apps.jpg",
+        imageAlt: "Person using a government service app at a service centre",
       },
       {
         name: "Basic Computer Skills & MS Office",
         target: "Job seekers, students (Class 10+), unemployed youth",
         hoursRange: "12-15 hrs",
         sessions: "6 sessions",
+        image: "/courses/digital/basic-computer.jpg",
+        imageAlt: "Two students practising MS Word and Excel on a desktop",
       },
       {
         name: "Google Sheets & Data Basics",
         target: "SHG members, micro-entrepreneurs, students (Class 10+)",
         hoursRange: "6-8 hrs",
         sessions: "4 sessions",
+        image: "/courses/digital/google-sheets.jpg",
+        imageAlt: "Woman analysing a chart in Google Sheets on her laptop",
       },
       {
         name: "AI Tools for Everyday Life",
         target: "General population, small business owners, students",
         hoursRange: "5-6 hrs",
         sessions: "3 sessions",
+        image: "/courses/digital/ai-tools.jpg",
+        imageAlt: "Small business owner using an AI assistant app on phone",
       },
     ],
   },
@@ -113,24 +143,32 @@ const CATEGORIES: Category[] = [
     color: "#E85D50",
     bgColor: "rgba(232,93,80,0.14)",
     hoursRange: "8-10 hrs",
+    image: "/courses/safety.jpg",
+    imageAlt: "Smartphone with security icons overlay representing online safety",
     courses: [
       {
         name: "Online Safety for Teens (Class 8–12)",
         target: "Students aged 13–18",
         hoursRange: "8-10 hrs",
         sessions: "5 sessions",
+        image: "/courses/safety/teens.jpg",
+        imageAlt: "Teacher guiding a student on safe phone use with a lock icon overlay",
       },
       {
         name: "Cybersecurity for Women",
         target: "Women using smartphones and internet",
         hoursRange: "3-4 hrs",
         sessions: "2 sessions",
+        image: "/courses/safety/cybersecurity.jpg",
+        imageAlt: "Woman refusing to share an OTP message on her phone",
       },
       {
         name: "Spotting Scams & Digital Fraud",
         target: "Seniors and new internet users",
         hoursRange: "2-3 hrs",
         sessions: "1 session",
+        image: "/courses/safety/scams.jpg",
+        imageAlt: "Young man warning an elderly woman about a phishing scam on her phone",
       },
     ],
   },
@@ -141,30 +179,40 @@ const CATEGORIES: Category[] = [
     color: "#A66DE8",
     bgColor: "rgba(166,109,232,0.16)",
     hoursRange: "10-14 hrs",
+    image: "/courses/employability.jpg",
+    imageAlt: "Job candidate in an interview with a resume in hand",
     courses: [
       {
         name: "Spoken English for Workplace",
         target: "Job seekers, entry-level employees",
         hoursRange: "12-15 hrs",
         sessions: "6 sessions",
+        image: "/courses/employability/spoken-english.jpg",
+        imageAlt: "Trainer leading a Spoken English class with engaged participants",
       },
       {
         name: "Customer Service & Communication",
         target: "Youth seeking BPO, retail, hospitality jobs",
         hoursRange: "8-10 hrs",
         sessions: "5 sessions",
+        image: "/courses/employability/customer-service.jpg",
+        imageAlt: "Customer service representative wearing a headset at her desk",
       },
       {
         name: "Interview Skills & Resume Building",
         target: "First-time job seekers, Class 12 and graduates",
         hoursRange: "5-6 hrs",
         sessions: "3 sessions",
+        image: "/courses/employability/interview-resume.jpg",
+        imageAlt: "Candidate in a suit handing over a resume during an interview",
       },
       {
         name: "Professional Workplace Etiquette",
         target: "First-time formal sector workers",
         hoursRange: "5-6 hrs",
         sessions: "3 sessions",
+        image: "/courses/employability/workplace-etiquette.jpg",
+        imageAlt: "Colleagues shaking hands at the office, demonstrating workplace etiquette",
       },
     ],
   },
@@ -175,24 +223,32 @@ const CATEGORIES: Category[] = [
     color: "#F39C12",
     bgColor: "rgba(243,156,18,0.16)",
     hoursRange: "10-12 hrs",
+    image: "/courses/entrepreneurship.jpg",
+    imageAlt: "Tailor working at a sewing machine in a small boutique",
     courses: [
       {
         name: "Starting Your Micro-Business",
         target: "SHG members, aspiring entrepreneurs, homemakers",
         hoursRange: "10-12 hrs",
         sessions: "5 sessions",
+        image: "/courses/entrepreneurship/micro-business.jpg",
+        imageAlt: "Tailor at her sewing machine running a home-based micro-business",
       },
       {
         name: "Digital Marketing for Small Businesses",
         target: "Small business owners, vendors, self-employed",
         hoursRange: "8-10 hrs",
         sessions: "4 sessions",
+        image: "/courses/entrepreneurship/digital-marketing.jpg",
+        imageAlt: "Small business owner filming a product reel with a phone on a tripod",
       },
       {
         name: "Basic Bookkeeping for Small Businesses",
         target: "Micro-entrepreneurs, shop owners, vendors",
         hoursRange: "8-10 hrs",
         sessions: "4 sessions",
+        image: "/courses/entrepreneurship/bookkeeping.jpg",
+        imageAlt: "Shop owner recording accounts in a ledger beside a laptop",
       },
     ],
   },
@@ -203,12 +259,16 @@ const CATEGORIES: Category[] = [
     color: "#3498DB",
     bgColor: "rgba(52,152,219,0.14)",
     hoursRange: "6-8 hrs",
+    image: "/courses/career.jpg",
+    imageAlt: "Student reviewing a career options chart with a counsellor",
     courses: [
       {
         name: "Career Planning for Class 10–12 Students",
         target: "Students in Class 10 to 12",
         hoursRange: "6-8 hrs",
         sessions: "5 sessions",
+        image: "/courses/career/career-planning.jpg",
+        imageAlt: "Counsellor reviewing a Career Roadmap with a high school student",
       },
     ],
   },
@@ -223,7 +283,11 @@ const STEP = CARD_WIDTH + GAP;
 function CategoryCard({ cat }: { cat: Category }) {
   return (
     <div className="flex-none w-[280px] overflow-hidden rounded-xl border border-gray-200 bg-white transition-all hover:-translate-y-1 hover:border-gray-300 hover:shadow-[0_8px_20px_rgba(27,43,101,0.08)]">
-      <div className="h-[160px] border-b border-dashed border-gray-300 bg-gray-100" />
+      <img
+        src={cat.image}
+        alt={cat.imageAlt}
+        className="h-[160px] w-full object-cover"
+      />
       <div className="flex flex-col gap-3 p-5">
         <div
           className="flex h-10 w-10 items-center justify-center rounded-md text-[18px] font-bold leading-none"
@@ -271,7 +335,11 @@ function CategoryCard({ cat }: { cat: Category }) {
 function CourseCard({ course, cat }: { course: Course; cat: Category }) {
   return (
     <div className="flex-none w-[280px] overflow-hidden rounded-xl border border-gray-200 bg-white transition-all hover:-translate-y-1 hover:border-gray-300 hover:shadow-[0_8px_20px_rgba(27,43,101,0.08)]">
-      <div className="h-[160px] border-b border-dashed border-gray-300 bg-gray-100" />
+      <img
+        src={course.image ?? cat.image}
+        alt={course.imageAlt ?? cat.imageAlt}
+        className="h-[160px] w-full object-cover"
+      />
       <div className="flex flex-col gap-3 p-5">
         <div
           className="flex h-10 w-10 items-center justify-center rounded-md text-[18px] font-bold leading-none"
