@@ -387,7 +387,7 @@ export default function Courses() {
         {/* Header */}
         <div className="relative mb-10 text-center">
           <a
-            href="https://eds-foundation.vercel.app/edstellar_course_catalog.pdf"
+            href="https://www.edstellarfoundation.org/edstellar_course_catalog.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="absolute right-0 top-2 hidden items-center gap-2.5 rounded border-[1.5px] border-navy bg-white px-5 py-3 text-[11.5px] font-semibold uppercase tracking-[0.4px] text-navy transition-all hover:bg-navy hover:text-white lg:inline-flex"
@@ -408,7 +408,7 @@ export default function Courses() {
         </div>
 
         <a
-          href="https://eds-foundation.vercel.app/edstellar_course_catalog.pdf"
+          href="https://www.edstellarfoundation.org/edstellar_course_catalog.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="mx-auto mb-6 flex w-full max-w-xs items-center justify-center gap-2.5 rounded border-[1.5px] border-navy bg-white px-5 py-3 text-[11.5px] font-semibold uppercase tracking-[0.4px] text-navy transition-all hover:bg-navy hover:text-white lg:hidden"
@@ -512,7 +512,7 @@ export default function Courses() {
               </svg>
             </button>
             <a
-              href="https://eds-foundation.vercel.app/edstellar_course_catalog.pdf"
+              href="https://www.edstellarfoundation.org/edstellar_course_catalog.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-[12.5px] font-bold uppercase tracking-[0.7px] text-lime-deep underline-offset-4 transition-opacity hover:opacity-80"

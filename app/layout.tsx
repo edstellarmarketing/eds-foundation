@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 
-const SITE_URL = "https://eds-foundation.vercel.app";
+const SITE_URL = "https://www.edstellarfoundation.org";
 const TITLE = "Edstellar Foundation | Global Community Skilling NGO";
 const DESCRIPTION =
   "Edstellar Foundation delivers 22 community skilling courses across financial, digital, employability & entrepreneurship pillars for underserved communities.";
@@ -13,15 +13,6 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: TITLE,
   description: DESCRIPTION,
-  // Staging/preview — block search engines for now
-  robots: {
-    index: false,
-    follow: false,
-    googleBot: {
-      index: false,
-      follow: false,
-    },
-  },
   alternates: {
     canonical: "/",
   },
