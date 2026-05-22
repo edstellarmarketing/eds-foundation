@@ -23,7 +23,7 @@ export default function Partner() {
   return (
     <section
       id="partner"
-      className="relative overflow-hidden bg-navy px-6 py-[100px] sm:px-10"
+      className="relative scroll-mt-[80px] overflow-hidden bg-navy px-6 py-[100px] sm:px-10"
     >
       {/* Soft lime glow */}
       <div

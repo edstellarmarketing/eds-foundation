@@ -151,7 +151,10 @@ export default function Hero() {
       </div>
 
       {/* Impact strip — sits at bottom of hero fold */}
-      <div className="relative z-[2] mx-auto w-full max-w-[1280px]">
+      <div
+        id="impact"
+        className="relative z-[2] mx-auto w-full max-w-[1280px] scroll-mt-[80px]"
+      >
         <div className="rounded-xl border border-gray-200 bg-white shadow-[0_12px_36px_rgba(27,43,101,0.08)]">
           <div className="grid grid-cols-2 divide-y divide-gray-200 lg:grid-cols-4 lg:divide-x lg:divide-y-0">
             {STATS.map((stat) => (

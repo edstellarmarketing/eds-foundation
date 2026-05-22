@@ -452,7 +452,7 @@ export default function Courses() {
   const next = () => setIndex((i) => Math.min(maxIndex, i + 1));
 
   return (
-    <section id="courses" className="bg-beige px-6 py-[90px] sm:px-10">
+    <section id="courses" className="scroll-mt-[80px] bg-beige px-6 py-[90px] sm:px-10">
       <div className="mx-auto max-w-[1280px]">
         {/* Header */}
         <div className="relative mb-10 text-center">

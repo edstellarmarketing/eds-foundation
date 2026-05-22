@@ -17,7 +17,7 @@ const CARDS = [
 
 export default function OurWork() {
   return (
-    <section id="work" className="bg-white px-6 pb-10 pt-20 sm:px-10">
+    <section id="work" className="scroll-mt-[80px] bg-white px-6 pb-10 pt-20 sm:px-10">
       <div className="mx-auto max-w-[1280px]">
         <div className="grid grid-cols-1 gap-7 lg:grid-cols-2">
           {CARDS.map((card) => (
